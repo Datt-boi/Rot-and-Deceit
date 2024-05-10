@@ -14,10 +14,13 @@ public class Guardclass {
     
 
     public void guardencounter(){
+        Object[] options = {"attack", "guard"};
         guardstrength = basestrength + itemstrength;
         message = "A guard attacks you with a " + items + "! \nStrength: " + guardstrength + "\nHP: " + hitpoints ;
 
-        JOptionPane.showMessageDialog(null, message);
+        JOptionPane.showOptionDialog(null, "Test",
+                "Rot and Deceit",
+                JOptionPane.DEFAULT_OPTION, JOptionPane.ERROR_MESSAGE, null, options, options[0]);
     }
 
 }
