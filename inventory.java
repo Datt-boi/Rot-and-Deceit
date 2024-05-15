@@ -17,14 +17,17 @@ public class inventory {
         if (swrd == "use rusty falcion") {
             JOptionPane.showInputDialog(Arrays.toString(cheese.toArray())
                     + " You equip the falchion.\n An elegant blade, despite the specks of rust that coat it.");
-            App.Bstr = App.Bstr + 10;
+            App.maxstr = App.Bstr + 10;
 
         }
         //see? hardcoded. have fun cheesing items in.
         if (swrd == "use leather armour") {
             JOptionPane.showInputDialog(Arrays.toString(cheese.toArray())
                     + " You equip the Leather armour.\n it fits snugly over your body, \n feeling almost like a second skin.");
-            App.PHP = App.PHP + 10;
+            App.maxPHP = App.PHP + 10;
+            if (App.curPHP >= 100); {
+                App.curPHP = App.maxPHP;
+            }
         }
     }
 }
