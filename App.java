@@ -235,7 +235,7 @@ public class App {
                         }
 
                         JOptionPane.showOptionDialog(null,
-                                        "congratulations! you've completed the Rot and Deceit Demo! Give yourself a pat on the back.\n Oh! and before I forget!\n IGNORE THE SPELLING ERRORS. THIS WAS FINISHED ON CRUNCH.\n NO TIME TO CHECK WORDING.\n\n\n Please report any bugs you encounter!\n thanks for playing!",
+                                        "congratulations! you've completed the Rot and Deceit Demo! Give yourself a pat on the back.\n Oh! and before I forget!\n Please report any bugs you encounter!\n thanks for playing!",
                                         "rot and deceit",
                                         JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, lose,
                                         lose[0]);

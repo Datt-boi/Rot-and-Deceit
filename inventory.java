@@ -12,7 +12,7 @@ public class inventory {
     public static void tron() throws Exception {
 
         if (inventory.cheese == null || inventory.cheese.isEmpty()
-        || inventory.cheese.get(0) == null){
+                || inventory.cheese.get(0) == null) {
             return;
         }
         Object[] cont = { "continue", "Back to inventory" };
@@ -53,7 +53,6 @@ public class inventory {
                     JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont,
                     cont[0]);
 
-            // );
             App.curPHP = App.curPHP - 1000;
         }
 
