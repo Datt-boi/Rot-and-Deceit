@@ -8,10 +8,17 @@ public class inventory {
     // billies.
     public static String swrd = null;
     public static ArrayList<String> cheese = new ArrayList<String>();
+    public static ArrayList<String> inv = new ArrayList<String>();
+    public static String s1 = null;
+    public static String s2 = null;
+    public static String s3 = null;
+    public static String s4 = null;
+    public static String s5 = null;
+
 
     public static void tron() throws Exception {
 
-        if (inventory.cheese == null || inventory.cheese.isEmpty()
+        if (inventory.cheese == null || inventory.cheese.isEmpty() 
                 || inventory.cheese.get(0) == null) {
             return;
         }
@@ -23,20 +30,39 @@ public class inventory {
         // because of time crunch, every item is hardcoded, and there's no checks to see
         // if you actually have said item. use that as you will.
         if (swrd.equals("use rusty falcion")) {
-            JOptionPane.showOptionDialog(null,
+            if (cheese.contains(s1)){
+                JOptionPane.showOptionDialog(null,
                     "You equip the falchion.\n An elegant blade, despite the specks of rust that\n coat it.",
                     "rot and deceit",
                     JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont,
                     cont[0]);
-            App.maxstr = App.Bstr + 10;
+                App.maxstr = App.Bstr + 10;
+            }
+            else{
+                JOptionPane.showOptionDialog(null,
+                    "You don't have that item!",
+                    "rot and deceit",
+                    JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont,
+                    cont[0]);
+            }
+
         }
         // see? hardcoded. have fun cheesing items in.
         else if (swrd.equals("use leather armour")) {
-            JOptionPane.showInputDialog(Arrays.toString(cheese.toArray())
+            if (cheese.contains(s2)){
+                JOptionPane.showInputDialog(Arrays.toString(cheese.toArray())
                     + " You equip the Leather armour.\n it fits snugly over your body, \n feeling almost like a second skin.");
-            App.maxPHP = App.PHP + 10;
-            if (App.curPHP >= 100) {
-                App.curPHP = App.maxPHP;
+                App.maxPHP = App.PHP + 10;
+                if (App.curPHP >= 100) {
+                    App.curPHP = App.maxPHP;
+                }
+            }
+            else{
+                JOptionPane.showOptionDialog(null,
+                    "You don't have that item!",
+                    "rot and deceit",
+                    JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont,
+                    cont[0]);
             }
         } else if (swrd.equals("use spear")) {
             JOptionPane.showOptionDialog(null,

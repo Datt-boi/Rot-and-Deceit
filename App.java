@@ -24,7 +24,7 @@ public class App {
 
                 // while loop is here so that if player dies, the game ends.
                 while (curPHP > 0) {
-                        // Start of the came. continue buttons aren't used because they're just there
+                        // Start of the game. continue buttons aren't used because they're just there
                         // for display purposes.
                         JOptionPane.showOptionDialog(null,
                                         "You awaken in the pitch darkness of your cell,\n a familiar smell of dried blood and rotting corpses stains your nose.\n How long has it been? Weeks? Years?\n You have no understanding of time anymore.",
@@ -248,4 +248,4 @@ public class App {
                                 JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, lose, lose[0]);
         }
 
-}
+} 
