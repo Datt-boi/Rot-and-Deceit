@@ -9,12 +9,15 @@ public class blightedwolfclass {
     public static int hitpoints = 20;
     public static String message;
 
+
     public static void wolfencounter() {
         Object[] options = { "attack", "defend" };
+        Object[] lose = { "GAME OVER", };
+
         wolfstrength = basestrength;
         message = "A Blighted Wolf attacks you!\nStrength: " + wolfstrength + "\nHP: " + hitpoints + "\n Your HP: "
                 + App.curPHP;
-        while (hitpoints > 0) {
+        while (hitpoints > 0 && App.curPHP > 0){
             int action = JOptionPane.showOptionDialog(null, message, "Rot and Deceit", JOptionPane.DEFAULT_OPTION,
                     JOptionPane.PLAIN_MESSAGE,
                     null, options, options[0]);
@@ -30,8 +33,18 @@ public class blightedwolfclass {
                 App.curPHP = (App.curPHP - (wolfstrength / 2));
             }
         }
-        message = "You defeated the wolf!";
-        JOptionPane.showMessageDialog(null, message);
-        return;
+        if (App.curPHP > 0){
+            message = "You defeated the wolf!";
+            JOptionPane.showMessageDialog(null, message);
+            return;
+        }
+        else {
+            message = "The wolf's relentless onslaught of teeth and claws has proven too much for you to face. You can feel your strength slowly fading...";
+            JOptionPane.showOptionDialog(null,
+                message,
+                "rot and deceit",
+                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, lose, lose[0]);
+                System.exit (0);
+        }
     }
 }
