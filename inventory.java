@@ -7,7 +7,7 @@ public class inventory {
     // these variables need to be outside the loop or else nothing works. silly
     // billies.
     public static String swrd = null;
-    public static ArrayList<String> cheese = new ArrayList<String>();
+    public static ArrayList<String> items = new ArrayList<String>();
     public static ArrayList<String> inv = new ArrayList<String>();
     public static String s1 = null;
     public static String s2 = null;
@@ -18,25 +18,25 @@ public class inventory {
 
     public static void tron() throws Exception {
 
-        if (inventory.cheese == null || inventory.cheese.isEmpty() 
-                || inventory.cheese.get(0) == null) {
+        if (inventory.items == null || inventory.items.isEmpty() 
+                || inventory.items.get(0) == null) {
             return;
         }
         Object[] cont = { "continue", "Back to inventory" };
 
         // here is where our player choics are made.
         swrd = JOptionPane.showInputDialog(
-                Arrays.toString(cheese.toArray()) + "\n write use 'ITEM NAME' in dialouge box to use item. no caps.");
+                Arrays.toString(items.toArray()) + "\n write use 'ITEM NAME' in dialouge box to use item. no caps.");
         // because of time crunch, every item is hardcoded, and there's no checks to see
         // if you actually have said item. use that as you will.
         if (swrd.equals("use rusty falcion")) {
-            if (cheese.contains(s1)){
+            if (items.contains(s1)){
                 JOptionPane.showOptionDialog(null,
                     "You equip the falchion.\n An elegant blade, despite the specks of rust that\n coat it.",
                     "rot and deceit",
                     JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont,
                     cont[0]);
-                App.maxstr = App.Bstr + 10;
+                App.playerStr = App.Bstr + 10;
             }
             else{
                 JOptionPane.showOptionDialog(null,
@@ -49,12 +49,12 @@ public class inventory {
         }
         // see? hardcoded. have fun cheesing items in.
         else if (swrd.equals("use leather armour")) {
-            if (cheese.contains(s2)){
-                JOptionPane.showInputDialog(Arrays.toString(cheese.toArray())
+            if (items.contains(s2)){
+                JOptionPane.showInputDialog(Arrays.toString(items.toArray())
                     + " You equip the Leather armour.\n it fits snugly over your body, \n feeling almost like a second skin.");
-                App.maxPHP = App.PHP + 10;
-                if (App.curPHP >= 100) {
-                    App.curPHP = App.maxPHP;
+                App.maxPHP = App.basePlayerHP + 10;
+                if (App.PlayerHP >= 100) {
+                    App.PlayerHP = App.maxPHP;
                 }
             }
             else{
@@ -70,7 +70,7 @@ public class inventory {
                     "rot and deceit",
                     JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont,
                     cont[0]);
-            App.maxstr = App.Bstr + 5;
+            App.playerStr = App.Bstr + 5;
         } else if (swrd.equals("use berries")) {
             ;
             JOptionPane.showOptionDialog(null,
@@ -79,7 +79,7 @@ public class inventory {
                     JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont,
                     cont[0]);
 
-            App.curPHP = App.curPHP - 1000;
+            App.PlayerHP = App.PlayerHP - 1482957208;
         }
 
     }

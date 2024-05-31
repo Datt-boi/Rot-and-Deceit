@@ -2,11 +2,11 @@
 import javax.swing.JOptionPane;
 
 public class App {
-        public static int PHP = 100;
+        public static int basePlayerHP = 100;
         public static int Bstr = 10;
-        public static int maxstr = 10;
+        public static int playerStr = 10;
         public static int maxPHP = 100;
-        public static int curPHP = 100;
+        public static int PlayerHP = 100;
 
         public static void main(String[] args) throws Exception {
 
@@ -23,7 +23,7 @@ public class App {
                 int time = 1;
 
                 // while loop is here so that if player dies, the game ends.
-                while (curPHP > 0) {
+                while (PlayerHP > 0) {
                         // Start of the game. continue buttons aren't used because they're just there
                         // for display purposes.
                         JOptionPane.showOptionDialog(null,
@@ -88,8 +88,8 @@ public class App {
                                         // that later
                                         String s1 = "rusty falcion";
                                         String s2 = "leather armour";
-                                        inventory.cheese.add(s1);
-                                        inventory.cheese.add(s2);
+                                        inventory.items.add(s1);
+                                        inventory.items.add(s2);
                                         choose = JOptionPane.showOptionDialog(null,
                                                         // quick tutorial on java inventory
                                                         "Welcome to the inventory tutorial. \n When using the inventory,\n you will see a list of your items along with a text dialouge.\n Type 'use', as well as the item name\n to ethier equip, use, or consume said item.",
@@ -131,8 +131,8 @@ public class App {
                                         snagornice[0]);
                         if (choose == 1) {
 
-                                if (inventory.cheese == null || inventory.cheese.isEmpty()
-                                                || inventory.cheese.get(0) == null) {
+                                if (inventory.items == null || inventory.items.isEmpty()
+                                                || inventory.items.get(0) == null) {
                                         JOptionPane.showOptionDialog(null,
                                                         // quick tutorial on java inventory
                                                         "Welcome to the inventory tutorial. \n When using the inventory,\n you will see a list of your items along with a text dialouge.\n Type 'use', as well as the item name\n to ethier equip, use, or consume said item.",
@@ -144,7 +144,7 @@ public class App {
                                 }
 
                                 String s3 = "spear";
-                                inventory.cheese.add(s3);
+                                inventory.items.add(s3);
                                 choose = JOptionPane.showOptionDialog(null,
                                                 "You take the spear off the young mans corpse,\n and head out for the town he was talking about.\n You need to get out of this place. ",
                                                 "rot and deceit",
@@ -156,7 +156,7 @@ public class App {
 
                         } else {
                                 String s3 = "spear";
-                                inventory.cheese.add(s3);
+                                inventory.items.add(s3);
                                 choose = JOptionPane.showOptionDialog(null,
                                                 "Deciding to respect the young mans body,\n you quietly leave without taking the spear.\n You need to get to the town and get out of here.",
                                                 "rot and deceit",
@@ -176,9 +176,9 @@ public class App {
                                                 "rot and deceit",
                                                 JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, Cont,
                                                 Cont[0]);
-                                curPHP = curPHP - 5;
-                                if (inventory.cheese == null || inventory.cheese.isEmpty()
-                                                || inventory.cheese.get(0) == null) {
+                                PlayerHP = PlayerHP - 5;
+                                if (inventory.items == null || inventory.items.isEmpty()
+                                                || inventory.items.get(0) == null) {
                                         JOptionPane.showOptionDialog(null,
                                                         // quick tutorial on java inventory
                                                         "Welcome to the inventory tutorial. \n When using the inventory,\n you will see a list of your items along with a text dialouge.\n Type 'use', as well as the item name\n to ethier equip, use, or consume said item.",
@@ -188,7 +188,7 @@ public class App {
                                                         Cont[0]);
                                 }
                                 String s4 = "berries";
-                                inventory.cheese.add(s4);
+                                inventory.items.add(s4);
                                 JOptionPane.showOptionDialog(null,
                                                 "As you return to the path,\n you quickly realise something is off..\n The woods are much too quiet.",
                                                 "rot and deceit",

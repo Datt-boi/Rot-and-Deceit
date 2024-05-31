@@ -19,7 +19,7 @@ public class deceitfulmanclass {
         dmanstrength = basestrength + itemstrength;
         // displaying the encounter message
         message = "The Deceitful Man attacks you with a " + items + "! \nStrength: " + dmanstrength + "\nHP: "
-                + hitpoints + "\n Your HP: " + App.curPHP;
+                + hitpoints + "\n Your HP: " + App.PlayerHP;
         // while loop that will stop the encounter as soon as the enemy runs out of HP
         while (hitpoints > 0) {
             //
@@ -29,22 +29,22 @@ public class deceitfulmanclass {
             // If the player chooses to attack, this code will trigger
             if (action == 0) {
                 // subtracting the players attack strength from the enemy's HP
-                hitpoints = (hitpoints - App.maxstr);
+                hitpoints = (hitpoints - App.playerStr);
 
                 // subtracting the enemy's strength from the player's HP
-                App.curPHP = (App.curPHP - dmanstrength);
+                App.PlayerHP = (App.PlayerHP - dmanstrength);
                 // displaying the results of these attacks to the player
                 message = "you attacked the guard! \nThe guard deals you " + dmanstrength
                         + " damage with his spear! \nStrength: " + dmanstrength + "\nHP: " + hitpoints + "\n Your HP: "
-                        + App.curPHP;
+                        + App.PlayerHP;
             }
             // If the player chooses not to attack(to guard), this code triggers
             else {
 
                 message = "You guarded! \nThe guard deals you " + (dmanstrength / 2)
                         + " damage with his spear! \nStrength: " + dmanstrength + "\nHP: " + hitpoints + "\n Your HP: "
-                        + App.curPHP;
-                App.curPHP = (App.curPHP - (dmanstrength / 2));
+                        + App.PlayerHP;
+                App.PlayerHP = (App.PlayerHP - (dmanstrength / 2));
             }
         }
     }

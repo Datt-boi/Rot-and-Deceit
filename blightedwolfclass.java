@@ -8,12 +8,12 @@ public class blightedwolfclass {
     public static int wolfstrength;
     public static int basestrength = 10;
     public static int strength;
-    public static int hitpoints = 20;
+    public static int enemyHP = 20;
     public static String message;
-    public static String Paccmessage;
-    public static String Eaccmessage;
-    public static int Paccuracy = ThreadLocalRandom.current().nextInt(1, 6);
-    public static int Eaccuracy = ThreadLocalRandom.current().nextInt(1, 6);
+    public static String playerAccMsg;
+    public static String enemyAccMsg;
+    public static int playerAcc = ThreadLocalRandom.current().nextInt(1, 6);
+    public static int enemyAcc = ThreadLocalRandom.current().nextInt(1, 6);
     public static Object[] options = { "attack", "guard" };
     public static Object[] lose = {"GAME OVER",};
     public static int guardvalue = 0;
@@ -21,9 +21,9 @@ public class blightedwolfclass {
 
     public static void wolfencounter() {
         wolfstrength = basestrength;
-        message = "A Blighted Wolf attacks you!\nStrength: " + wolfstrength + "\nHP: " + hitpoints + "\n Your HP: "
-                + App.curPHP;
-        while (hitpoints > 0 && App.curPHP > 0){
+        message = "A Blighted Wolf attacks you!\nStrength: " + wolfstrength + "\nHP: " + enemyHP + "\n Your HP: "
+                + App.PlayerHP;
+        while (enemyHP > 0 && App.PlayerHP > 0){
             int action = JOptionPane.showOptionDialog(null, message, "Rot and Deceit", JOptionPane.DEFAULT_OPTION,
                     JOptionPane.PLAIN_MESSAGE,
                     null, options, options[0]);
@@ -32,65 +32,69 @@ public class blightedwolfclass {
                 int Paccuracy = ThreadLocalRandom.current().nextInt(1, 7);
                 //if the accuracy point is greater then 3, triggers this loop
                 if (Paccuracy > 3 || (Paccuracy > 1 && guardvalue == 1)){
-                    //subtracts an amount equal to the player's strength from the wolf's hitpoints, then storing the attack result in Paccmessage
-                    hitpoints = (hitpoints - App.maxstr);
-                    Paccmessage = "And you hit it! The wolf lost " + App.maxstr + " HP!";
+                    //subtracts an amount equal to the player's strength from the wolf's enemyHP, then storing the attack result in playerAccMsg
+                    enemyHP = (enemyHP - App.playerStr);
+                    playerAccMsg = "And you hit it! The wolf lost " + App.playerStr + " HP!";
                 }
                 //If the accuracy is not greater then 3, triggers this loop
                 else {
-                    //Stores the attack result (no damage dealt) in Paccmessage
-                    Paccmessage = " But you missed, and dealt no damage!";
+                    //Stores the attack result (no damage dealt) in playerAccMsg
+                    playerAccMsg = " But you missed, and dealt no damage!";
                 }
 
                 //calculating the accuracy of the enemy's attack and storing it in Paccuracy
-                int Eaccuracy = ThreadLocalRandom.current().nextInt(1, 7);
-                //if the accuracy point is greater then 3, triggers this loop
-                if (Eaccuracy > 2){
-                    //subtracts an amount equal to the wolf's strength from the player's hitpoints, then storing the attack result in Eaccmessage
-                    App.curPHP = (App.curPHP - wolfstrength);
-                    Eaccmessage = "The wolf hits you, dealing you " + wolfstrength + " damage.";
+                int enemyAcc = ThreadLocalRandom.current().nextInt(1, 7);
+
+                if (enemyAcc > 2){
+                    App.PlayerHP = (App.PlayerHP - wolfstrength);
+                    enemyAccMsg = "The wolf hits you, dealing you " + wolfstrength + " damage.";
                 }
-                //If the accuracy is not greater then 3, triggers this loop
                 else {
-                    //Stores the attack result (no damage dealt) in Eaccmessage
-                    Eaccmessage = " But it misses, and deals no damage!";
+                    //Stores the attack result (no damage dealt) in enemyAccMsg
+                    enemyAccMsg = " But it misses, and deals no damage!";
                 }
-                message = "you attacked the wolf, " + Paccmessage + "\nThe wolf attacks!"  + Eaccmessage
-                + "\nWolf Strength: " + wolfstrength + "\nWolf HP: " + hitpoints
-                + "\n Your HP: " + App.curPHP;
+                message = "you attacked the wolf, " + playerAccMsg + "\nThe wolf attacks!"  + enemyAccMsg
+                + "\nWolf Strength: " + wolfstrength + "\nWolf HP: " + enemyHP
+                + "\n Your HP: " + App.PlayerHP;
                 guardvalue = 0;
             } 
             
             else {
                 //calculating the accuracy of the enemy's attack and storing it in Paccuracy
-                int Eaccuracy = ThreadLocalRandom.current().nextInt(1, 7);
+                int enemyAcc = ThreadLocalRandom.current().nextInt(1, 7);
                 //if the accuracy point is greater then 3, triggers this loop
-                if (Eaccuracy > 3){
-                    //subtracts an amount equal to the wolf's strength from the player's hitpoints, then storing the attack result in Eaccmessage
-                    App.curPHP = (App.curPHP - wolfstrength);
-                    Eaccmessage = "and hits you, dealing you " + wolfstrength + " damage.";
+                if (enemyAcc > 3){
+                    //subtracts an amount equal to the wolf's strength from the player's enemyHP, then storing the attack result in enemyAccMsg
+                    App.PlayerHP = (App.PlayerHP - wolfstrength);
+                    enemyAccMsg = "and hits you, dealing you " + wolfstrength + " damage.";
                 }
                 //If the accuracy is not greater then 3, triggers this loop
                 else {
-                    //Stores the attack result (no damage dealt) in Paccmessage
-                    Eaccmessage = ",but it misses, and deals no damage!";
+                    //Stores the attack result (no damage dealt) in playerAccMsg
+                    enemyAccMsg = ",but it misses, and deals no damage!";
                 }
                 //calculating the sucess of the player's guard
                 int Paccuracy = ThreadLocalRandom.current().nextInt(1,7);
                 if (Paccuracy > 2){
-                    App.curPHP = (App.curPHP + wolfstrength);
-                    Paccmessage = "You blocked the wolf's attack sucesfully, negating any damage! \nYour accuracy will also be significantly boosted next turn!";
-                    guardvalue = 1;
+                    if (enemyAcc > 3){
+                        App.PlayerHP = (App.PlayerHP + wolfstrength);
+                        playerAccMsg = "You blocked the wolf's attack sucesfully, negating any damage! \nYour accuracy will also be significantly boosted next turn!";
+                        guardvalue = 1;
+                    }
+                    else{
+                        playerAccMsg = "You blocked the wolf's attack sucesfully, negating any damage! \nYour accuracy will also be significantly boosted next turn!";
+                        guardvalue = 1;
+                    }
                 }
                 else {
-                    Paccmessage = "You try to block the wolf's attack, but you are unsucessful.";
+                    playerAccMsg = "You try to block the wolf's attack, but you are unsucessful.";
                 }
-                message = "You are on guard, preparing to block! \nThe guard attacks you " + Eaccmessage + "\n" + Paccmessage +
-                "\nWolf strength: " + wolfstrength + "\nWolf HP: " + hitpoints
-                + "\n Your HP: " + App.curPHP;
+                message = "You are on guard, preparing to block! \nThe wolf attacks you " + enemyAccMsg + "\n" + playerAccMsg +
+                "\nWolf strength: " + wolfstrength + "\nWolf HP: " + enemyHP
+                + "\n Your HP: " + App.PlayerHP;
             }
         }
-        if (App.curPHP > 0){
+        if (App.PlayerHP > 0){
             message = "You defeated the wolf!";
             JOptionPane.showMessageDialog(null, message);
             return;
