@@ -86,10 +86,10 @@ public class App {
                                                         Cont[0]);
                                         // these are inventory items, stored in the inventory class. we'll yap about
                                         // that later
-                                        String s1 = "rusty falcion";
-                                        String s2 = "leather armour";
-                                        inventory.items.add(s1);
-                                        inventory.items.add(s2);
+                                        String rFalc = "rusty falcion";
+                                        String lArmour = "leather armour";
+                                        inventory.items.add(rFalc);
+                                        inventory.items.add(lArmour);
                                         choose = JOptionPane.showOptionDialog(null,
                                                         // quick tutorial on java inventory
                                                         "Welcome to the inventory tutorial. \n When using the inventory,\n you will see a list of your items along with a text dialouge.\n Type 'use', as well as the item name\n to ethier equip, use, or consume said item.",
@@ -143,8 +143,8 @@ public class App {
 
                                 }
 
-                                String s3 = "spear";
-                                inventory.items.add(s3);
+                                String spear = "spear";
+                                inventory.items.add(spear);
                                 choose = JOptionPane.showOptionDialog(null,
                                                 "You take the spear off the young mans corpse,\n and head out for the town he was talking about.\n You need to get out of this place. ",
                                                 "rot and deceit",
@@ -187,8 +187,8 @@ public class App {
                                                         Cont,
                                                         Cont[0]);
                                 }
-                                String s4 = "berries";
-                                inventory.items.add(s4);
+                                String pBerries = "berries";
+                                inventory.items.add(pBerries);
                                 JOptionPane.showOptionDialog(null,
                                                 "As you return to the path,\n you quickly realise something is off..\n The woods are much too quiet.",
                                                 "rot and deceit",
