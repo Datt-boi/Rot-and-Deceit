@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-
 import javax.swing.JOptionPane;
 
 public class inventory {
@@ -12,7 +9,6 @@ public class inventory {
     public static String spear = "dont have";
     public static String pBerries = "dont have";
     public static String s5 = "dont have";
-    public static ArrayList<String> inv = new ArrayList<String>();
     public static int ArmourCount = 0;
 
 
