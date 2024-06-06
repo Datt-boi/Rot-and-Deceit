@@ -4,9 +4,7 @@ import javafx.scene.control.Button;
 public class Menu {
 
     @FXML
-    public static Button but1;
-        
-
+    public static Button btn1 = new Button("_Normal");
 
     @FXML
     public Button but2;
