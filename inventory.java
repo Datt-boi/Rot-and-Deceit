@@ -7,29 +7,26 @@ public class inventory {
     // these variables need to be outside the loop or else nothing works. silly
     // billies.
     public static String swrd = null;
-    public static ArrayList<String> items = new ArrayList<String>();
-    public static ArrayList<String> inv = new ArrayList<String>();
     public static String rFalc = "dont have";
     public static String lArmour = "dont have";
     public static String spear = "dont have";
     public static String pBerries = "dont have";
     public static String s5 = "dont have";
+    public static ArrayList<String> inv = new ArrayList<String>();
+    public static int ArmourCount = 0;
 
 
     public static void tron() throws Exception {
 
-        if (inventory.items == null || inventory.items.isEmpty() 
-                || inventory.items.get(0) == null) {
-            return;
-        }
+        Object[] items = {rFalc, lArmour, spear, pBerries};
+
         Object[] cont = { "continue", "Back to inventory" };
-        Object[] selections = {rFalc, lArmour, spear, pBerries};
 
         // here is where our player choics are made.
         String message = "Select the item you want to use";
         int swrd = JOptionPane.showOptionDialog(null, message, "Rot and Deceit", JOptionPane.DEFAULT_OPTION,
                     JOptionPane.PLAIN_MESSAGE,
-                    null, selections, selections[0]);
+                    null, items, items[0]);
 
         // because of time crunch, every item is hardcoded, and there's no checks to see
         // if you actually have said item. use that as you will.
@@ -37,18 +34,16 @@ public class inventory {
             JOptionPane.showOptionDialog(null,
                 "You equip the falchion.\n An elegant blade, despite the specks of rust that\n coat it.",
                 "rot and deceit",
-                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont,
-                cont[0]);
+                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
             App.playerStr = App.Bstr + 10;
         }
         // see? hardcoded. have fun cheesing items in.
         else if (swrd == 1) {
-            JOptionPane.showInputDialog(Arrays.toString(items.toArray())
-                + " You equip the Leather armour.\n it fits snugly over your body, \n feeling almost like a second skin.");
-            App.maxPHP = App.basePlayerHP + 10;
-            if (App.PlayerHP >= 100) {
-                App.PlayerHP = App.maxPHP;
-            }
+            JOptionPane.showOptionDialog(null,
+                "You equip the Leather armour.\n it fits snugly over your body, \n feeling almost like a second skin.",
+                "rot and deceit",
+                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+            ArmourCount = 1;
         } 
         else if (swrd == 2) {
             JOptionPane.showOptionDialog(null,

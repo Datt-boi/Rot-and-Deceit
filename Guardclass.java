@@ -54,7 +54,7 @@ public class Guardclass {
                 //calculating the accuracy of the enemy's attack and storing it in playerAcc
                 int enemyAcc = ThreadLocalRandom.current().nextInt(1, 7);
                 //if the accuracy point is greater then 3, triggers this loop
-                if (enemyAcc > 3){
+                if (enemyAcc > (3 + (inventory.ArmourCount))){
                     //subtracts an amount equal to the guard's strength from the player's hitPoints, then storing the attack result in enemyAccMsg
                     App.PlayerHP = (App.PlayerHP - guardstrength);
                     enemyAccMsg = "The guard hits you, dealing you " + guardstrength + " damage.";
@@ -77,7 +77,7 @@ public class Guardclass {
                 //calculating the accuracy of the enemy's attack and storing it in enemyAcc
                 int enemyAcc = ThreadLocalRandom.current().nextInt(1, 7);
                 
-                if (enemyAcc > 3){
+                if (enemyAcc > (3 + (inventory.ArmourCount))){
                     //subtracts an amount equal to the guard's strength from the player's hitPoints, then storing the attack result in enemyAccMsg
                     App.PlayerHP = (App.PlayerHP - guardstrength);
                     enemyAccMsg = "and hits you, dealing you " + guardstrength + " damage.";
@@ -90,7 +90,7 @@ public class Guardclass {
                 //calculating the sucess of the player's guard
                 int playerAcc = ThreadLocalRandom.current().nextInt(1,7);
                 if (playerAcc > 2){
-                    if (enemyAcc > 3){
+                    if (enemyAcc > (3 + (inventory.ArmourCount))){
                         App.PlayerHP = (App.PlayerHP + guardstrength);
                         playerAccMsg = "You blocked the guard's attack sucesfully, negating any damage! \nYour accuracy will also be significantly boosted next turn!";
                         guardvalue = 1;
