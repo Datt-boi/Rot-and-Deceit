@@ -2,11 +2,7 @@
 import javax.swing.JOptionPane;
 
 public class App {
-        public static int basePlayerHP = 100;
-        public static int Bstr = 10;
-        public static int playerStr = 10;
-        public static int maxPHP = 100;
-        public static int PlayerHP = 100;
+        
 
         public static void main(String[] args) throws Exception {
 
@@ -23,7 +19,7 @@ public class App {
                 int time = 1;
 
                 // while loop is here so that if player dies, the game ends.
-                while (PlayerHP > 0) {
+                while (Stats.playerHP > 0) {
                         // Start of the game. continue buttons aren't used because they're just there
                         // for display purposes.
                         JOptionPane.showOptionDialog(null,
@@ -152,7 +148,7 @@ public class App {
                                         "rot and deceit",
                                         JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, Cont, Cont[0]);
                                 
-                                PlayerHP = PlayerHP - 5;
+                                Stats.playerHP = Stats.playerHP - 5;
 
                                 inventory.pBerries = "Berries";
                                 JOptionPane.showOptionDialog(null,

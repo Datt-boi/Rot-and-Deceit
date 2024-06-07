@@ -4,12 +4,11 @@ public class inventory {
     // these variables need to be outside the loop or else nothing works. silly
     // billies.
     public static String swrd = null;
-    public static String rFalc = "dont have";
-    public static String lArmour = "dont have";
-    public static String spear = "dont have";
-    public static String pBerries = "dont have";
+    public static String rFalc = "Don't have";
+    public static String lArmour = "Don't have";
+    public static String spear = "Don't have";
+    public static String pBerries = "Don't have";
     public static String s5 = "dont have";
-    public static int ArmourCount = 0;
 
 
     public static void tron() throws Exception {
@@ -27,33 +26,57 @@ public class inventory {
         // because of time crunch, every item is hardcoded, and there's no checks to see
         // if you actually have said item. use that as you will.
         if (swrd == 0) {
-            JOptionPane.showOptionDialog(null,
-                "You equip the falchion.\n An elegant blade, despite the specks of rust that\n coat it.",
-                "rot and deceit",
-                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
-            App.playerStr = App.Bstr + 10;
+            if (rFalc == "Rusty Falchion"){
+                rustyfalchion.tron();
+            }
+            else {
+                JOptionPane.showOptionDialog(null,
+                    "You don't have that item! Keep playing to get it",
+                    "rot and deceit",
+                    JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+            }
         }
         // see? hardcoded. have fun cheesing items in.
         else if (swrd == 1) {
-            JOptionPane.showOptionDialog(null,
-                "You equip the Leather armour.\n it fits snugly over your body, \n feeling almost like a second skin.",
-                "rot and deceit",
-                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
-            ArmourCount = 1;
+            if(lArmour == "Leather Armour"){
+                leatherarmour.tron();
+            }
+            else {
+                JOptionPane.showOptionDialog(null,
+                    "You don't have that item! Keep playing to get it",
+                    "rot and deceit",
+                    JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+            }
         } 
         else if (swrd == 2) {
-            JOptionPane.showOptionDialog(null,
-                " You equip the castle gaurds' spear.\n it is mass produced trash, \n but it'll suffice.",
-                "rot and deceit",
-                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
-            App.playerStr = App.Bstr + 5; 
+            if(spear == "spear"){
+                JOptionPane.showOptionDialog(null,
+                    " You equip the castle gaurds' spear.\n it is mass produced trash, \n but it'll suffice.",
+                    "rot and deceit",
+                    JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                Stats.playerStr = Stats.baseStr + 5; 
+            }
+            else {
+                JOptionPane.showOptionDialog(null,
+                    "You don't have that item! Keep playing to get it",
+                    "rot and deceit",
+                    JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+            }
         } 
         else if (swrd == 3) {
-            JOptionPane.showOptionDialog(null,
+            if(pBerries == "Berries"){
+                JOptionPane.showOptionDialog(null,
                 " You eat the berries, they taste delighfully...\n BY THE NINES! I SHOULD NOT HAVE EATEN THOSE \n I'M TWEAKING!!! I THINK I'M GOING TO DIE!",
                 "rot and deceit",
                 JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
-            App.PlayerHP = App.PlayerHP - 1482957208;
+                Stats.playerHP = Stats.playerHP - 1482957208;
+            }
+            else {
+                JOptionPane.showOptionDialog(null,
+                    "You don't have that item! Keep playing to get it",
+                    "rot and deceit",
+                    JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+            }
         }
     }
 }

@@ -22,8 +22,8 @@ public class blightedwolfclass {
     public static void wolfencounter() {
         wolfstrength = basestrength;
         message = "A Blighted Wolf attacks you!\nStrength: " + wolfstrength + "\nHP: " + enemyHP + "\n Your HP: "
-                + App.PlayerHP;
-        while (enemyHP > 0 && App.PlayerHP > 0){
+                + Stats.playerHP;
+        while (enemyHP > 0 && Stats.playerHP > 0){
             int action = JOptionPane.showOptionDialog(null, message, "Rot and Deceit", JOptionPane.DEFAULT_OPTION,
                     JOptionPane.PLAIN_MESSAGE,
                     null, options, options[0]);
@@ -33,8 +33,8 @@ public class blightedwolfclass {
                 //if the accuracy point is greater then 3, triggers this loop
                 if (Paccuracy > 3 || (Paccuracy > 1 && guardvalue == 1)){
                     //subtracts an amount equal to the player's strength from the wolf's enemyHP, then storing the attack result in playerAccMsg
-                    enemyHP = (enemyHP - App.playerStr);
-                    playerAccMsg = "And you hit it! The wolf lost " + App.playerStr + " HP!";
+                    enemyHP = (enemyHP - Stats.playerStr);
+                    playerAccMsg = "And you hit it! The wolf lost " + Stats.playerStr + " HP!";
                 }
                 //If the accuracy is not greater then 3, triggers this loop
                 else {
@@ -45,8 +45,8 @@ public class blightedwolfclass {
                 //calculating the accuracy of the enemy's attack and storing it in Paccuracy
                 int enemyAcc = ThreadLocalRandom.current().nextInt(1, 7);
 
-                if (enemyAcc > (2 + (inventory.ArmourCount))){
-                    App.PlayerHP = (App.PlayerHP - wolfstrength);
+                if (enemyAcc > (2 + (Stats.armourCount))){
+                    Stats.playerHP = (Stats.playerHP - wolfstrength);
                     enemyAccMsg = "The wolf hits you, dealing you " + wolfstrength + " damage.";
                 }
                 else {
@@ -55,7 +55,7 @@ public class blightedwolfclass {
                 }
                 message = "you attacked the wolf, " + playerAccMsg + "\nThe wolf attacks!"  + enemyAccMsg
                 + "\nWolf Strength: " + wolfstrength + "\nWolf HP: " + enemyHP
-                + "\n Your HP: " + App.PlayerHP;
+                + "\n Your HP: " + Stats.playerHP;
                 guardvalue = 0;
             } 
             
@@ -63,9 +63,9 @@ public class blightedwolfclass {
                 //calculating the accuracy of the enemy's attack and storing it in Paccuracy
                 int enemyAcc = ThreadLocalRandom.current().nextInt(1, 7);
                 //if the accuracy point is greater then 3, triggers this loop
-                if (enemyAcc > (3 + (inventory.ArmourCount))){
+                if (enemyAcc > (3 + (Stats.armourCount))){
                     //subtracts an amount equal to the wolf's strength from the player's enemyHP, then storing the attack result in enemyAccMsg
-                    App.PlayerHP = (App.PlayerHP - wolfstrength);
+                    Stats.playerHP = (Stats.playerHP - wolfstrength);
                     enemyAccMsg = "and hits you, dealing you " + wolfstrength + " damage.";
                 }
                 //If the accuracy is not greater then 3, triggers this loop
@@ -76,8 +76,8 @@ public class blightedwolfclass {
                 //calculating the sucess of the player's guard
                 int Paccuracy = ThreadLocalRandom.current().nextInt(1,7);
                 if (Paccuracy > 2){
-                    if (enemyAcc > (2 + (inventory.ArmourCount))){
-                        App.PlayerHP = (App.PlayerHP + wolfstrength);
+                    if (enemyAcc > (2 + (Stats.armourCount))){
+                        Stats.playerHP = (Stats.playerHP + wolfstrength);
                         playerAccMsg = "You blocked the wolf's attack sucesfully, negating any damage! \nYour accuracy will also be significantly boosted next turn!";
                         guardvalue = 1;
                     }
@@ -91,10 +91,10 @@ public class blightedwolfclass {
                 }
                 message = "You are on guard, preparing to block! \nThe wolf attacks you " + enemyAccMsg + "\n" + playerAccMsg +
                 "\nWolf strength: " + wolfstrength + "\nWolf HP: " + enemyHP
-                + "\n Your HP: " + App.PlayerHP;
+                + "\n Your HP: " + Stats.playerHP;
             }
         }
-        if (App.PlayerHP > 0){
+        if (Stats.playerHP > 0){
             message = "You defeated the wolf!";
             JOptionPane.showMessageDialog(null, message);
             return;

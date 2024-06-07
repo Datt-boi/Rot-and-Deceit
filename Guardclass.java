@@ -25,9 +25,9 @@ public class Guardclass {
         //message displayed at start of encounter, one time
         message = "A guard attacks you with a " + items + "! \nStrength: " + guardstrength + "\nHP: "
                     + enemyHP
-                    + "\n Your HP: " + App.PlayerHP;
+                    + "\n Your HP: " + Stats.playerHP;
 
-        while (enemyHP > 0 && App.PlayerHP > 0) {
+        while (enemyHP > 0 && Stats.playerHP > 0) {
 
             guardstrength = basestrength;
 
@@ -43,8 +43,8 @@ public class Guardclass {
                 int playerAcc = ThreadLocalRandom.current().nextInt(1, 7);
 
                 if (playerAcc > 3 || (playerAcc > 1 && guardvalue == 1)){
-                    enemyHP = (enemyHP - App.playerStr);
-                    playerAccMsg = "And you hit him! The guard lost " + App.playerStr + " HP!";
+                    enemyHP = (enemyHP - Stats.playerStr);
+                    playerAccMsg = "And you hit him! The guard lost " + Stats.playerStr + " HP!";
                 }
                 //If the accuracy is not greater then 3, triggers this loop
                 else {
@@ -54,9 +54,9 @@ public class Guardclass {
                 //calculating the accuracy of the enemy's attack and storing it in playerAcc
                 int enemyAcc = ThreadLocalRandom.current().nextInt(1, 7);
                 //if the accuracy point is greater then 3, triggers this loop
-                if (enemyAcc > (3 + (inventory.ArmourCount))){
+                if (enemyAcc > (3 + (Stats.armourCount))){
                     //subtracts an amount equal to the guard's strength from the player's hitPoints, then storing the attack result in enemyAccMsg
-                    App.PlayerHP = (App.PlayerHP - guardstrength);
+                    Stats.playerHP = (Stats.playerHP - guardstrength);
                     enemyAccMsg = "The guard hits you, dealing you " + guardstrength + " damage.";
                 }
                 //If the accuracy is not greater then 3, triggers this loop
@@ -68,7 +68,7 @@ public class Guardclass {
                 //results stored in playerAccMsg and enemyAccMsg, as well as the remaining HP of both the guard and the player
                 message = "you attacked the guard, " + playerAccMsg + "\nThe guard attacks!"  + enemyAccMsg
                 + "\nGuard Strength: " + guardstrength + "\nGuard HP: " + enemyHP
-                + "\n Your HP: " + App.PlayerHP;
+                + "\n Your HP: " + Stats.playerHP;
                 guardvalue = 0;
             } 
             
@@ -77,9 +77,9 @@ public class Guardclass {
                 //calculating the accuracy of the enemy's attack and storing it in enemyAcc
                 int enemyAcc = ThreadLocalRandom.current().nextInt(1, 7);
                 
-                if (enemyAcc > (3 + (inventory.ArmourCount))){
+                if (enemyAcc > (3 + (Stats.armourCount))){
                     //subtracts an amount equal to the guard's strength from the player's hitPoints, then storing the attack result in enemyAccMsg
-                    App.PlayerHP = (App.PlayerHP - guardstrength);
+                    Stats.playerHP = (Stats.playerHP - guardstrength);
                     enemyAccMsg = "and hits you, dealing you " + guardstrength + " damage.";
                 }
                 //If the accuracy is not greater then 3, triggers this loop
@@ -90,8 +90,8 @@ public class Guardclass {
                 //calculating the sucess of the player's guard
                 int playerAcc = ThreadLocalRandom.current().nextInt(1,7);
                 if (playerAcc > 2){
-                    if (enemyAcc > (3 + (inventory.ArmourCount))){
-                        App.PlayerHP = (App.PlayerHP + guardstrength);
+                    if (enemyAcc > (3 + (Stats.armourCount))){
+                        Stats.playerHP = (Stats.playerHP + guardstrength);
                         playerAccMsg = "You blocked the guard's attack sucesfully, negating any damage! \nYour accuracy will also be significantly boosted next turn!";
                         guardvalue = 1;
                     }
@@ -105,10 +105,10 @@ public class Guardclass {
                 }
                 message = "You are on guard, preparing to block! \nThe guard attacks you " + enemyAccMsg + "\n" + playerAccMsg +
                 "\nGuard strength: " + guardstrength + "\nGuard HP: " + enemyHP
-                + "\n Your HP: " + App.PlayerHP;
+                + "\n Your HP: " + Stats.playerHP;
             }
         }
-        if (App.PlayerHP > 0){
+        if (Stats.playerHP > 0){
             message = "You defeated the guard! \n It dropped the spear!";
             JOptionPane.showMessageDialog(null, message);
             return;
