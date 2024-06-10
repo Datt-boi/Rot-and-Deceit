@@ -2,7 +2,6 @@
 import javax.swing.JOptionPane;
 
 public class App {
-        
 
         public static void main(String[] args) throws Exception {
 
@@ -84,7 +83,7 @@ public class App {
                                         // that later
                                         inventory.rFalc = "Rusty Falchion";
                                         inventory.lArmour = "Leather Armour";
-                                        
+
                                         if (choose == 1) {
                                                 inventory.tron();
                                         }
@@ -120,10 +119,10 @@ public class App {
                         if (choose == 1) {
                                 inventory.spear = "spear";
                                 choose = JOptionPane.showOptionDialog(null,
-                                        "You take the spear off the young mans corpse,\n and head out for the town he was talking about.\n You need to get out of this place. ",
-                                        "rot and deceit",
-                                        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, Cont,
-                                        Cont[0]);
+                                                "You take the spear off the young mans corpse,\n and head out for the town he was talking about.\n You need to get out of this place. ",
+                                                "rot and deceit",
+                                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, Cont,
+                                                Cont[0]);
                                 if (choose == 1) {
                                         inventory.tron();
                                 }
@@ -144,31 +143,33 @@ public class App {
                                         JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, forage, forage[0]);
                         if (choose == 0) {
                                 JOptionPane.showOptionDialog(null,
-                                        "You decide it would be best to find some food,\n so you spend an hour or two off the path, searching for some grub. \n Unfortunatley, all you end up getting are some lousy berries,\n an a gash on your shoulder, thanks to a stick. \n \n You lose 5 health, but you gain berries.",
-                                        "rot and deceit",
-                                        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, Cont, Cont[0]);
-                                
+                                                "You decide it would be best to find some food,\n so you spend an hour or two off the path, searching for some grub. \n Unfortunatley, all you end up getting are some lousy berries,\n an a gash on your shoulder, thanks to a stick. \n \n You lose 5 health, but you gain berries.",
+                                                "rot and deceit",
+                                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, Cont,
+                                                Cont[0]);
+
                                 Stats.playerHP = Stats.playerHP - 5;
 
                                 inventory.pBerries = "Berries";
                                 JOptionPane.showOptionDialog(null,
-                                        "As you return to the path,\n you quickly realise something is off..\n The woods are much too quiet.",
-                                        "rot and deceit",
-                                        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, Cont, Cont[0]);
-                        } 
-                        else {
+                                                "As you return to the path,\n you quickly realise something is off..\n The woods are much too quiet.",
+                                                "rot and deceit",
+                                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, Cont,
+                                                Cont[0]);
+                        } else {
                                 choose = JOptionPane.showOptionDialog(null,
-                                        "Deciding to stay on the path,\n you take in the beautiful sounds of the woods.\n Although, something isn't right.",
-                                        "rot and deceit",
-                                        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, Cont, Cont[0]);
+                                                "Deciding to stay on the path,\n you take in the beautiful sounds of the woods.\n Although, something isn't right.",
+                                                "rot and deceit",
+                                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, Cont,
+                                                Cont[0]);
                                 if (choose == 1) {
                                         inventory.tron();
                                 }
                         }
                         choose = JOptionPane.showOptionDialog(null,
-                                "You're suspicions soon turned out to be right, \n as a rabid wolf leaps out in front of you.\n The thing reeks of rot,\n and it looks almost like chunks of flesh are falling off of the thing.",
-                                "rot and deceit",
-                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, Cont, Cont[0]);
+                                        "You're suspicions soon turned out to be right, \n as a rabid wolf leaps out in front of you.\n The thing reeks of rot,\n and it looks almost like chunks of flesh are falling off of the thing.",
+                                        "rot and deceit",
+                                        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, Cont, Cont[0]);
                         if (choose == 1) {
                                 inventory.tron();
                         }
@@ -207,4 +208,4 @@ public class App {
                                 JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, lose, lose[0]);
         }
 
-} 
+}

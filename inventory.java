@@ -50,11 +50,7 @@ public class inventory {
         } 
         else if (swrd == 2) {
             if(spear == "spear"){
-                JOptionPane.showOptionDialog(null,
-                    " You equip the castle gaurds' spear.\n it is mass produced trash, \n but it'll suffice.",
-                    "rot and deceit",
-                    JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
-                Stats.playerStr = Stats.baseStr + 5; 
+                castleSpear.tron();
             }
             else {
                 JOptionPane.showOptionDialog(null,
@@ -65,11 +61,7 @@ public class inventory {
         } 
         else if (swrd == 3) {
             if(pBerries == "Berries"){
-                JOptionPane.showOptionDialog(null,
-                " You eat the berries, they taste delighfully...\n BY THE NINES! I SHOULD NOT HAVE EATEN THOSE \n I'M TWEAKING!!! I THINK I'M GOING TO DIE!",
-                "rot and deceit",
-                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
-                Stats.playerHP = Stats.playerHP - 1482957208;
+                poisonousBerries.tron();
             }
             else {
                 JOptionPane.showOptionDialog(null,
