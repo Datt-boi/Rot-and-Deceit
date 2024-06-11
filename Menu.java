@@ -1,18 +1,25 @@
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.DialogPane;
+import javafx.scene.layout.AnchorPane;
 
 public class Menu {
 
-    @FXML
-    public static Button btn1 = new Button("_Normal");
+    
 
     @FXML
-    public Button but2;
+    private Button but2;
 
     @FXML
-    public Button butext;
+    private Button butext;
 
     @FXML
-    public Button butinv;  
+    private Button butinv;
+
+    @FXML
+    private DialogPane dialouge;
+
+    @FXML
+    private AnchorPane plop;
 
 }
