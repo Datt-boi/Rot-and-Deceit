@@ -213,6 +213,14 @@ public class App {
 
                         if (choose == 0){
                                 //put the rest of the game here, until the man at the end of the game
+                                //temporary exit msg
+                                JOptionPane.showMessageDialog(null, "Not programmed - exiting demo");
+                        }
+
+                        if (choose == 1){
+                                //temporary exit message - once programmed this selection will skip you to the fight at the end of the game which should be almost impossible to win at this early stage.
+                                //delete this before final commit
+                                JOptionPane.showMessageDialog(null, "Not programmed - exiting demo");
                         }
 
                         if (choose == 2){
