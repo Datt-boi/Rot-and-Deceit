@@ -15,8 +15,6 @@ public class inventory {
 
         Object[] items = {rFalc, lArmour, spear, pBerries};
 
-        Object[] cont = { "continue", "Back to inventory" };
-
         // here is where our player choics are made.
         String message = "Select the item you want to use";
         int swrd = JOptionPane.showOptionDialog(null, message, "Rot and Deceit", JOptionPane.DEFAULT_OPTION,
@@ -30,10 +28,7 @@ public class inventory {
                 rustyfalchion.tron();
             }
             else {
-                JOptionPane.showOptionDialog(null,
-                    "You don't have that item! Keep playing to get it",
-                    "rot and deceit",
-                    JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                invDontHave.tron();
             }
         }
         // see? hardcoded. have fun cheesing items in.
@@ -42,10 +37,7 @@ public class inventory {
                 leatherarmour.tron();
             }
             else {
-                JOptionPane.showOptionDialog(null,
-                    "You don't have that item! Keep playing to get it",
-                    "rot and deceit",
-                    JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                invDontHave.tron();
             }
         } 
         else if (swrd == 2) {
@@ -53,10 +45,7 @@ public class inventory {
                 castleSpear.tron();
             }
             else {
-                JOptionPane.showOptionDialog(null,
-                    "You don't have that item! Keep playing to get it",
-                    "rot and deceit",
-                    JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                invDontHave.tron();
             }
         } 
         else if (swrd == 3) {
@@ -64,10 +53,7 @@ public class inventory {
                 poisonousBerries.tron();
             }
             else {
-                JOptionPane.showOptionDialog(null,
-                    "You don't have that item! Keep playing to get it",
-                    "rot and deceit",
-                    JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                invDontHave.tron();
             }
         }
     }
