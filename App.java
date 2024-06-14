@@ -212,7 +212,47 @@ public class App {
                         //If you choose option 2 (leave town), it should skip to the final fight, once we code that.
 
                         if (choose == 0){
-                                //put the rest of the game here, until the man at the end of the game
+                                choose = JOptionPane.showOptionDialog(null,
+                                "You keep walking into denser and denser parts of the town.",
+                                "rot and deceit",
+                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+
+                                choose = JOptionPane.showOptionDialog(null,
+                                "Your search goes on and on, \nUntil at long last, you hear voices in the distance. \n You eagerly walk towards the voices.",
+                                "rot and deceit",
+                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+
+                                choose = JOptionPane.showOptionDialog(null,
+                                "Although as you get closer, you realize \n Something is wrong. \n Very wrong.",
+                                "rot and deceit",
+                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+
+                                choose = JOptionPane.showOptionDialog(null,
+                                "Those arent the noises of a city.",
+                                "rot and deceit",
+                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+
+                                choose = JOptionPane.showOptionDialog(null,
+                                "Those noises are a deafening mix of battle cries and screams.",
+                                "rot and deceit",
+                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+
+                                choose = JOptionPane.showOptionDialog(null,
+                                "It gets louder and louder as you get closer.\n Your ears can barely take it anymore.\n But you press on. You must find out what the guard was warning about.",
+                                "rot and deceit",
+                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+
+                                choose = JOptionPane.showOptionDialog(null,
+                                "You finally see what the noise was coming from.",
+                                "rot and deceit",
+                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+
+                                choose = JOptionPane.showOptionDialog(null,
+                                "The inner city walls, with guards desperately throwing anything they can find down at a horde of... \n Something. It looks human but it clearly isnt.",
+                                "rot and deceit",
+                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+
+
                                 //temporary exit msg
                                 JOptionPane.showMessageDialog(null, "Not programmed - exiting demo");
                         }
