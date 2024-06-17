@@ -1,15 +1,14 @@
 # Rot-and-Deceit
- A simple text-based adventure game. 
+ A simple text-based adventure game, made by Legamingdoggo73276 and Datt boi. 
+
 
  In rot an deceit you play as an escaped convict, trying to make his way through a depraved and rotten landscape. Will you be able so survive, or will you join the rest of the filth?
 
-**DELETE THIS WHEN FINAL COMMIT**
-Template for messages in the main story class
+ To play, simply launch the game, and follow the on-screen prompts.
 
-choose = JOptionPane.showOptionDialog(null,
-    "",
-    "rot and deceit",
-    JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, Cont, Cont[0]);
-if (choose == 1) {
-inventory.tron();
-}
+ Currently released on Version 1.0
+
+ Release dates:
+ Demo version - May 15 2024
+ Version 1.0 - June 16 2024
+
