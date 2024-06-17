@@ -23,7 +23,7 @@ public class Guardclass {
 
     public static void guardencounter() {
         //message displayed at start of encounter, one time
-        message = "A guard attacks you with a " + items + "! \nStrength: " + guardstrength + "\nHP: "
+        message = "A guard attacks you with a " + items + "! \nStrength: " + basestrength + "\nHP: "
                     + enemyHP
                     + "\n Your HP: " + Stats.playerHP;
 

@@ -1,15 +1,15 @@
 import javax.swing.JOptionPane;
 
-public class leatherarmour {
-
+public class bandage {
     public static void tron() throws Exception {
 
         Object[] cont = { "continue", "Back to inventory" };
         int invreturn = JOptionPane.showOptionDialog(null,
-            "You equip the Leather armour.\n it fits snugly over your body, \n feeling almost like a second skin.",
+            "You use the bandages. Your wounds already feel better...",
             "rot and deceit",
             JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
-        Stats.armourCount = 1;
+        Stats.playerHP = (Stats.playerHP + 25);
+        inventory.bandages = "Don't have";
 
         if(invreturn == 1){
             inventory.tron();

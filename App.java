@@ -17,6 +17,9 @@ public class App {
                 Object[] forage = { "Go foraging for berries", "continue on the path" };
                 Object[] tDirection = { "Go deeper into the town", "Turn back and try to leave town", "Try to find other options", "Inventory"};
                 Object[] tDirection2 = {"Climb to higher ground", "Run away from the... thing", "Try to fight off the creature."};
+                Object[] cityWalls = {"Force your way through the mob", "Try to get the city guards attention", "Try to find a way around the mob"};
+                Object[] weaponsmith ={"Buy the broadsword", "Save your money for later"};
+                Object[] win = {"Victory!"};
                 int time = 1;
 
                 // while loop is here so that if player dies, the game ends.
@@ -216,52 +219,198 @@ public class App {
                                 "You keep walking into denser and denser parts of the town.",
                                 "rot and deceit",
                                 JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                if (choose == 1) {
+                                        inventory.tron();
+                                }
 
                                 choose = JOptionPane.showOptionDialog(null,
                                 "Your search goes on and on, \nUntil at long last, you hear voices in the distance. \n You eagerly walk towards the voices.",
                                 "rot and deceit",
                                 JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                if (choose == 1) {
+                                        inventory.tron();
+                                }
 
                                 choose = JOptionPane.showOptionDialog(null,
                                 "Although as you get closer, you realize \n Something is wrong. \n Very wrong.",
                                 "rot and deceit",
                                 JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                if (choose == 1) {
+                                        inventory.tron();
+                                }
 
                                 choose = JOptionPane.showOptionDialog(null,
                                 "Those arent the noises of a city.",
                                 "rot and deceit",
                                 JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                if (choose == 1) {
+                                        inventory.tron();
+                                }
 
                                 choose = JOptionPane.showOptionDialog(null,
                                 "Those noises are a deafening mix of battle cries and screams.",
                                 "rot and deceit",
                                 JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                if (choose == 1) {
+                                        inventory.tron();
+                                }
 
                                 choose = JOptionPane.showOptionDialog(null,
                                 "It gets louder and louder as you get closer.\n Your ears can barely take it anymore.\n But you press on. You must find out what the guard was warning about.",
                                 "rot and deceit",
                                 JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                if (choose == 1) {
+                                        inventory.tron();
+                                }
 
                                 choose = JOptionPane.showOptionDialog(null,
                                 "You finally see what the noise was coming from.",
                                 "rot and deceit",
                                 JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                if (choose == 1) {
+                                        inventory.tron();
+                                }
 
                                 choose = JOptionPane.showOptionDialog(null,
                                 "The inner city walls, with guards desperately throwing anything they can find down at a horde of... \n Something. It looks human but it clearly isnt.",
                                 "rot and deceit",
                                 JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                if (choose == 1) {
+                                        inventory.tron();
+                                }
 
+                                choose = JOptionPane.showOptionDialog(null,
+                                "The guard told you to get into the city. That is all you can do anyway, nothing waits for you the way you came. How will you proceed?",
+                                "rot and deceit",
+                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cityWalls, cityWalls[0]);
 
-                                //temporary exit msg
-                                JOptionPane.showMessageDialog(null, "Not programmed - exiting demo");
+                                if(choose==0){
+                                        choose = JOptionPane.showOptionDialog(null,
+                                        "You try to force your way through, and immediatly get torn to pieces. \n \n \n ...what did you think was gonna happen ya dingus?",
+                                        "rot and deceit",
+                                        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, lose, lose[0]);
+                                        Stats.playerHP = (Stats.playerHP - 100000000);
+                                }
+
+                                if(choose==1){
+                                        choose = JOptionPane.showOptionDialog(null,
+                                        "You climb onto a roof, and start trying to get a guards attention. \n A sense of relief overwhelms you as the giard notices you. \n Unfortunately, some of the mob saw you climb the roof and decided to follow you up. \n And so, he shoots a cannon at the house you stand on, killing you along with those that followed you.",
+                                        "rot and deceit",
+                                        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, lose, lose[0]);
+                                        Stats.playerHP = (Stats.playerHP - 10000000);
+                                }
+                                choose = JOptionPane.showOptionDialog(null,
+                                        "You start to explore the perimiter of the city walls, taking good care to not let the mob of creatures notice you.",
+                                        "rot and deceit",
+                                        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                        if (choose == 1) {
+                                                inventory.tron();
+                                        }
+
+                                choose = JOptionPane.showOptionDialog(null,
+                                        "In doing so, you are able to get a much better look at what the creatures look like. \n They seem to be afflicted with the same blight that wolf had, and what you now assume must be what the guard was referring to. \nTHese are men, who look like they shouldnt be alive, with explosed bones and organs. \n You assume, that like the wolf, they behave extremely aggresively.",
+                                        "rot and deceit",
+                                        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                        if (choose == 1) {
+                                                inventory.tron();
+                                        }
+
+                                choose = JOptionPane.showOptionDialog(null,
+                                        "After a while, the mob seems to dissipate, and the city wall becomes surrounded by less and less men. \n You approach the wall, and find a hidden doorway in the wall, leading into a tunnel.",
+                                        "rot and deceit",
+                                        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                        if (choose == 1) {
+                                                inventory.tron();
+                                        }
+
+                                choose = JOptionPane.showOptionDialog(null,
+                                        "You emerge in a store, which has been boarded up. It looks like a clinic of sorts. It has mostly been looted, but some bandages still lay around. \n You check the cash safe. Empty.\nBut being the criminal that you are, you know to check underneath the safe, and sure enough a small amount of coins lies there for the taking.",
+                                        "rot and deceit",
+                                        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                        if (choose == 1) {
+                                                inventory.tron();
+                                        }
+                                
+                                String message = "you gained bandages!";
+                                JOptionPane.showMessageDialog(null, message);
+                                inventory.bandages = "Bandages";
+                                
+                                choose = JOptionPane.showOptionDialog(null,
+                                        "You emerge onto a street with dense townhouses. \n This time, it is not dead silent, however there are still much fewer people then you would expect in a place like this.",
+                                        "rot and deceit",
+                                        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                if (choose == 1) {
+                                        inventory.tron();
+                                }
+
+                                choose = JOptionPane.showOptionDialog(null,
+                                        "As you walk down the street, towards the grand castle in the center, you see a weaponsmith.",
+                                        "rot and deceit",
+                                        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                        if (choose == 1) {
+                                                inventory.tron();
+                                        }
+                                
+                                        choose = JOptionPane.showOptionDialog(null,
+                                        "You enter the weaponsmith, half hoping it is also closed. \nHowever, it is very much open for buisness, as there is a man standing at the counter. \n You ask the man for a nice blade, to defend against the blighted. \n He answers that due to a shortage in steel, they only were able to mass produce one kind of sword.\n Do you buy it?",
+                                        "rot and deceit",
+                                        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, weaponsmith, weaponsmith[0]);
+                                        if (choose == 0) {
+                                                message = "You gained a Broadsword!";
+                                                JOptionPane.showMessageDialog(null, message);
+                                                inventory.bSwrd = "Broadsword";
+                                        }
+
+                                        else {
+                                                choose = JOptionPane.showOptionDialog(null,
+                                                        "You choose to not buy the sword, and instead save your little money for other things.",
+                                                        "rot and deceit",
+                                                        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                                        if (choose == 1) {
+                                                                inventory.tron();
+                                                        }
+                                        }
+
+                                        choose = JOptionPane.showOptionDialog(null,
+                                                "You leave the weaponsmith, and continue making your way further into the city.",
+                                                "rot and deceit",
+                                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                        if (choose == 1) {
+                                                inventory.tron();
+                                        }
+
+                                        choose = JOptionPane.showOptionDialog(null,
+                                        "Suddendly, a man with a knife graps you! \n He declares that you must forfeit all your valuables to him or he will end your life right here! \n You fight the man!",
+                                        "rot and deceit",
+                                        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                        if (choose == 1) {
+                                                inventory.tron();
+                                        }
+
+                                        mugger.muggerencounter();
+
+                                        choose = JOptionPane.showOptionDialog(null,
+                                                "Having defeated the man, you start towards the city center once again. \n But then, you hear a deafening noise. \n You turn around to see what it is",
+                                                "rot and deceit",
+                                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                        if (choose == 1) {
+                                                inventory.tron();
+                                        }
+
+                                        choose = JOptionPane.showOptionDialog(null,
+                                                "And to your shock, you see the city walls collapsing. Blighted men are already pouring in \n You need to get out of here as fast as possible.",
+                                                "rot and deceit",
+                                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                        if (choose == 1) {
+                                                inventory.tron();
+                                        }
+
+                                        message = "Adrenaline boosts your strength and HP!";
+                                        JOptionPane.showMessageDialog(null, message);
+                                        Stats.playerStr = (Stats.playerStr + 50);
+                                        Stats.playerHP = (Stats.playerHP + 50);
                         }
 
-                        if (choose == 1){
-                                //temporary exit message - once programmed this selection will skip you to the fight at the end of the game which should be almost impossible to win at this early stage.
-                                //delete this before final commit
-                                JOptionPane.showMessageDialog(null, "Not programmed - exiting demo");
-                        }
 
                         if (choose == 2){
                                 choose = JOptionPane.showOptionDialog(null,
@@ -301,9 +450,27 @@ public class App {
                         }
 
                         //insert boss fight here
+                        choose = JOptionPane.showOptionDialog(null,
+                                "You get to the docks. You try to board a boat, but a man bars your access, demanding you pay an exorbitant sum. \n WHen you say you cant pay, he attacks you!",
+                                "rot and deceit",
+                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                        if (choose == 1) {
+                                inventory.tron();
+                        }
+
+                        deceitfulman.Manencounter();
+
+                        choose = JOptionPane.showOptionDialog(null,
+                                "After that harrowing fight, you board the boat. \n You set sail, letting the waves carry you away from this dying kingdom that once imprisoned you, truly free at last.",
+                                "rot and deceit",
+                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, win, win[0]);
+                        if (choose == 1) {
+                                inventory.tron();
+                        }
+
 
                         JOptionPane.showOptionDialog(null,
-                                        "congratulations! you've completed the Rot and Deceit Demo! Give yourself a pat on the back.\n Oh! and before I forget!\n Please report any bugs you encounter!\n thanks for playing!",
+                                        "Congratulations! you've completed the Rot and Deceit storyline! Give yourself a pat on the back.\n Oh! and before I forget!\n Please report any bugs you encounter!\n thanks for playing! \n \n Version 1.0",
                                         "rot and deceit",
                                         JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, lose,
                                         lose[0]);

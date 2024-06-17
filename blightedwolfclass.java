@@ -21,7 +21,7 @@ public class blightedwolfclass {
 
     public static void wolfencounter() {
         wolfstrength = basestrength;
-        message = "A Blighted Wolf attacks you!\nStrength: " + wolfstrength + "\nHP: " + enemyHP + "\n Your HP: "
+        message = "A Blighted Wolf attacks you!\nStrength: " + basestrength + "\nHP: " + enemyHP + "\n Your HP: "
                 + Stats.playerHP;
         while (enemyHP > 0 && Stats.playerHP > 0){
             int action = JOptionPane.showOptionDialog(null, message, "Rot and Deceit", JOptionPane.DEFAULT_OPTION,
