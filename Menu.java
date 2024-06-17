@@ -1,6 +1,7 @@
 import java.io.IOException;
 
 import javafx.application.Application;
+<<<<<<< Updated upstream
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -9,13 +10,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+=======
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+>>>>>>> Stashed changes
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class Menu extends Application {
+    static int time = 0;
 
-    @FXML
-    public static Button but1 = new Button("continue");
+
 
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
@@ -27,10 +33,21 @@ public class Menu extends Application {
         stage.show();
         stage.setScene(scene);
         stage.show();
+<<<<<<< Updated upstream
+=======
+       
+        new Thread( ()->{
+                App.game();
+               }).start(); 
+>>>>>>> Stashed changes
 
         }
 
+
+
     public static void main(String[] args) {
+        
         launch(args);
-    }
+        
+        }   
 }

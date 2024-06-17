@@ -51,10 +51,17 @@
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
+<<<<<<< Updated upstream
                         <Button fx:id="but1" layoutX="14.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="83.0" prefWidth="283.0" text="Button" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="15.0" onAction="#cont"/>
                         <Button fx:id="butinv" layoutX="14.0" layoutY="118.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="83.0" prefWidth="283.0" text="Button" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="120.0" onAction="#inv"/>
                         <Button fx:id="butext" layoutX="340.0" layoutY="118.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="83.0" prefWidth="283.0" text="Button" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="120.0" onAction="#choice"/>
                         <Button fx:id="but2" layoutX="361.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="83.0" prefWidth="262.0" text="Button" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.2" onAction="#plop"/>
+=======
+                        <Button fx:id="but1" layoutX="14.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#cont" prefHeight="83.0" prefWidth="283.0" text="Choice one" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="15.0" />
+                        <Button fx:id="butinv" layoutX="14.0" layoutY="118.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#inv" prefHeight="83.0" prefWidth="283.0" text="Inventory" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="120.0" />
+                        <Button fx:id="butext" layoutX="340.0" layoutY="118.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#choice" prefHeight="83.0" prefWidth="283.0" text= "Choice 3" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="120.0" />
+                        <Button fx:id="but2" layoutX="361.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plop" prefHeight="83.0" prefWidth="262.0" text="Choice two" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.2" />
+>>>>>>> Stashed changes
                      </children>
                   </AnchorPane>
               </items>
