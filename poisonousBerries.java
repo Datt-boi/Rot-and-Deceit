@@ -10,12 +10,6 @@ public class poisonousBerries {
         "rot and deceit",
         JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
         Stats.playerHP = Stats.playerHP - 1482957208;
-        
-        if(invreturn == 1){
-            inventory.tron();
-        }
-        else{
-            return;
-        }
+        System.exit(0);
     }
 }

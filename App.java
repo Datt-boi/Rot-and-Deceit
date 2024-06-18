@@ -497,5 +497,4 @@ public class App {
                                 "Rot and Deceit",
                                 JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, lose, lose[0]);
         }
-
 }
