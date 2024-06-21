@@ -6,9 +6,10 @@
 
  To play, simply launch the game, and follow the on-screen prompts.
 
- Currently released on Version 1.0
+ Currently released on Version 1.1
 
  Release dates:
  Demo version - May 15 2024
  Version 1.0 - June 16 2024
+ Version 1.1 - June 20 2024
 

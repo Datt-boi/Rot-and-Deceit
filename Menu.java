@@ -27,8 +27,6 @@ public class Menu extends Application {
         stage.show();
         stage.setScene(scene);
         stage.show();
-
-        app.app()
         }
 
     public static void main(String[] args) {
