@@ -7,6 +7,7 @@ public class Guardclass {
         enemy.enemyType = "guard";
         enemy.loseMsg = "guard's mastery of the spear";
         enemy.items = "a spear";
+        enemy.drops = "a spear";
 
         //Starting the encounter
         enemy.encounterDisplay();

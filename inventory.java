@@ -17,7 +17,7 @@ public class inventory {
         Object[] items = {rFalc, lArmour, spear, pBerries, bandages, bSwrd};
 
         // here is where our player choics are made.
-        String message = "Select the item you want to use";
+        String message = "Money = ¤" + Stats.money + "\n Select the item you want to use";
         int swrd = JOptionPane.showOptionDialog(null, message, "Rot and Deceit", JOptionPane.DEFAULT_OPTION,
                     JOptionPane.PLAIN_MESSAGE,
                     null, items, items[0]);

@@ -7,6 +7,7 @@ public class mugger {
         enemy.enemyType = "mugger";
         enemy.loseMsg = "Mugger's experience in robbing innocent people";
         enemy.items = "his fists";
+        enemy.drops = "¤20";
 
         //Starting the encounter
         enemy.encounterDisplay();

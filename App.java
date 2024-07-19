@@ -344,6 +344,10 @@ public class App {
                                 message = "you gained bandages!";
                                 JOptionPane.showMessageDialog(null, message);
                                 inventory.bandages = "Bandages";
+
+                                message = "You got ¤30!!";
+                                JOptionPane.showMessageDialog(null, message);
+                                Stats.money = 30;
                                 
                                 choose = JOptionPane.showOptionDialog(null,
                                         "You emerge onto a street with dense townhouses. \n This time, it is not dead silent, however there are still much fewer people then you would expect in a place like this.",
@@ -366,9 +370,15 @@ public class App {
                                         "Rot and Deceit",
                                         JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, weaponsmith, weaponsmith[0]);
                                         if (choose == 0) {
-                                                message = "You gained a Broadsword!";
+                                                if (Stats.money >= 25){
+                                                        message = "You spent ¤25 and bought a Broadsword!";
+                                                        inventory.bSwrd = "Broadsword";
+                                                        Stats.money = (Stats.money - 25);
+                                                }
+                                                else{
+                                                        message = "You can't afford this!";
+                                                }
                                                 JOptionPane.showMessageDialog(null, message);
-                                                inventory.bSwrd = "Broadsword";
                                         }
 
                                         else {
@@ -398,6 +408,8 @@ public class App {
                                         }
 
                                         mugger.muggerencounter();
+
+                                        Stats.money = (Stats.money + 20);
 
                                         choose = JOptionPane.showOptionDialog(null,
                                                 "Having defeated the man, you start towards the city center once again. \n But then, you hear a deafening noise. \n You turn around to see what it is",
@@ -486,7 +498,7 @@ public class App {
 
 
                         JOptionPane.showOptionDialog(null,
-                                "Congratulations! you've completed the Rot and Deceit storyline! Give yourself a pat on the back.\n Oh! and before I forget!\n Please report any bugs you encounter!\n thanks for playing! \n \n Version 1.0",
+                                "Congratulations! you've completed the Rot and Deceit storyline! Give yourself a pat on the back.\n Oh! and before I forget!\n Please report any bugs you encounter!\n thanks for playing! \n \n Version 1.2",
                                 "Rot and deceit",
                                 JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, lose, lose[0]);
                         return;

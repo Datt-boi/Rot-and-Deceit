@@ -12,6 +12,7 @@ public class enemy {
     public static String playerAccMsg;
     public static String enemyAccMsg;
     public static String loseMsg;
+    public static String drops;
     public static int playerAcc = ThreadLocalRandom.current().nextInt(1, 6);
     public static int enemyAcc = ThreadLocalRandom.current().nextInt(1, 6);
     public static Object[] options = { "attack", "guard" };
@@ -103,7 +104,7 @@ public class enemy {
             }
         }
         if (Stats.playerHP > 0){
-            message = "You defeated the " + enemyType + "!";
+            message = "You defeated the " + enemyType + "! \n It dropped " + drops + ".";
             JOptionPane.showMessageDialog(null, message);
             return;
         }

@@ -7,6 +7,7 @@ public class deceitfulman {
         enemy.enemyType = "man";
         enemy.loseMsg = "Man's sheer strength";
         enemy.items = "a zweihander";
+        enemy.drops = "nothing";
 
         //Starting the encounter
         enemy.encounterDisplay(); 

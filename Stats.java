@@ -6,4 +6,5 @@ public class Stats {
     public static int playerStr = 10;
     public static int maxPHP = 100;
     public static int playerHP = 100;
+    public static int money = 0;
 }

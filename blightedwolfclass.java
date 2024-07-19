@@ -7,6 +7,7 @@ public class blightedwolfclass {
         enemy.enemyType = "wolf";
         enemy.loseMsg = "wolf's relentless onslaught of teeth and claws";
         enemy.items = "its claws";
+        enemy.drops = "nothing";
 
         //Starting the encounter
         enemy.encounterDisplay();

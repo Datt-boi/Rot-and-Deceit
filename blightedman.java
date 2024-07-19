@@ -7,6 +7,7 @@ public class blightedman {
         enemy.enemyType = "man";
         enemy.loseMsg = "man's relentless, almost beastlike approach to fighting";
         enemy.items = "his fists";
+        enemy.drops = "nothing";
 
         //Starting the encounter
         enemy.encounterDisplay();
