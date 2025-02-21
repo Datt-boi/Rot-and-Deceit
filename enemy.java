@@ -104,11 +104,7 @@ public class enemy {
             }
         }
         if (Stats.playerHP > 0){
-<<<<<<< Updated upstream
-            message = "You defeated the " + enemyType + "! \n It dropped " + drops + ".";
-=======
             message = "You defeated the " + enemyType + "! \n \nAfter battle stats: \n HP = "+Stats.playerHP;
->>>>>>> Stashed changes
             JOptionPane.showMessageDialog(null, message);
             return;
         }

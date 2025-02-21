@@ -499,11 +499,7 @@ public class App {
 
 
                         JOptionPane.showOptionDialog(null,
-<<<<<<< Updated upstream
-                                "Congratulations! you've completed the Rot and Deceit storyline! Give yourself a pat on the back.\n Oh! and before I forget!\n Please report any bugs you encounter!\n thanks for playing! \n \n Version 1.2",
-=======
                                 "Congratulations! you've completed the Rot and Deceit storyline! Give yourself a pat on the back.\nOh! and before I forget!\nPlease report any bugs you encounter!\nThanks for playing! \n \nVersion 1.3",
->>>>>>> Stashed changes
                                 "Rot and deceit",
                                 JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, lose, lose[0]);
                         return;
