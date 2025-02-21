@@ -9,15 +9,16 @@ public class inventory {
     public static String spear = "Don't have";
     public static String pBerries = "Don't have";
     public static String bandages = "Don't have";
-    public static String bSwrd = "Don't have";
+    public static String brSwrd = "Don't have";
+
 
 
     public static void tron() throws Exception {
 
-        Object[] items = {rFalc, lArmour, spear, pBerries, bandages, bSwrd};
+        Object[] items = {rFalc, lArmour, spear, pBerries, bandages, brSwrd};
 
         // here is where our player choics are made.
-        String message = "Money = ¤" + Stats.money + "\n Select the item you want to use";
+        String message = "Money = ¤" + Stats.money + "\n HP = " + Stats.playerHP + "\n Select the item you want to use";
         int swrd = JOptionPane.showOptionDialog(null, message, "Rot and Deceit", JOptionPane.DEFAULT_OPTION,
                     JOptionPane.PLAIN_MESSAGE,
                     null, items, items[0]);
@@ -66,7 +67,7 @@ public class inventory {
             }
         }
         else if (swrd == 5){
-            if(bSwrd == "Broadsword"){
+            if(brSwrd == "Broadsword"){
                 broadSwrd.tron();
             }
             else {

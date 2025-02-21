@@ -372,7 +372,7 @@ public class App {
                                         if (choose == 0) {
                                                 if (Stats.money >= 25){
                                                         message = "You spent ¤25 and bought a Broadsword!";
-                                                        inventory.bSwrd = "Broadsword";
+                                                        inventory.brSwrd = "Broadsword";
                                                         Stats.money = (Stats.money - 25);
                                                 }
                                                 else{
@@ -410,17 +410,34 @@ public class App {
                                         mugger.muggerencounter();
 
                                         Stats.money = (Stats.money + 20);
+                                        
+                                        // INCOMPLETE AND INACTIVE continuation of the city story.
+                                        // choose = JOptionPane.showOptionDialog(null,
+                                        //         "Having defeated the man, you start towards the city center once again.",
+                                        //         "Rot and Deceit",
+                                        //         JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                        // if (choose == 1) {
+                                        //         inventory.tron();
+                                        // }
+
+                                        // choose = JOptionPane.showOptionDialog(null,
+                                        //         "The walk is long and tiring, the city is much bigger then you thought.",
+                                        //         "Rot and Deceit",
+                                        //         JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                        // if (choose == 1) {
+                                        //         inventory.tron();
+                                        // }
+
+                                        // choose = JOptionPane.showOptionDialog(null,
+                                        //         "You then realize that you havent eaten yet. As the adrenaline wears off, you realize that you have to eat, now.",
+                                        //         "Rot and Deceit",
+                                        //         JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
+                                        //if (choose == 1) {
+                                         //       inventory.tron();
+                                        //}
 
                                         choose = JOptionPane.showOptionDialog(null,
-                                                "Having defeated the man, you start towards the city center once again. \n But then, you hear a deafening noise. \n You turn around to see what it is",
-                                                "Rot and Deceit",
-                                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
-                                        if (choose == 1) {
-                                                inventory.tron();
-                                        }
-
-                                        choose = JOptionPane.showOptionDialog(null,
-                                                "And to your shock, you see the city walls collapsing. Blighted men are already pouring in \n You need to get out of here as fast as possible.",
+                                                "To your shock, you see the city walls collapsing. Blighted men are already pouring in \n You need to get out of here as fast as possible.",
                                                 "Rot and Deceit",
                                                 JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, cont, cont[0]);
                                         if (choose == 1) {
