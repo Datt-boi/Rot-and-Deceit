@@ -17,7 +17,11 @@ public class inventory {
         Object[] items = {rFalc, lArmour, spear, pBerries, bandages, bSwrd};
 
         // here is where our player choics are made.
+<<<<<<< Updated upstream
         String message = "Money = ¤" + Stats.money + "\n Select the item you want to use";
+=======
+        String message = "HP = " + Stats.playerHP + " \n \nSelect the item you want to use";
+>>>>>>> Stashed changes
         int swrd = JOptionPane.showOptionDialog(null, message, "Rot and Deceit", JOptionPane.DEFAULT_OPTION,
                     JOptionPane.PLAIN_MESSAGE,
                     null, items, items[0]);

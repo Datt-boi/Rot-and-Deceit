@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 public class castleSpear {
     public static void tron() throws Exception {
 
-        Object[] cont = { "continue", "Back to inventory" };
+        Object[] cont = { "Continue", "Back to inventory" };
 
         int invreturn = JOptionPane.showOptionDialog(null,
             " You equip the castle gaurds' spear.\n it is mass produced trash, \n but it'll suffice.",

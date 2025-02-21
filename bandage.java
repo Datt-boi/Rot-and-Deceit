@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 public class bandage {
     public static void tron() throws Exception {
 
-        Object[] cont = { "continue", "Back to inventory" };
+        Object[] cont = { "Continue", "Back to inventory" };
         int invreturn = JOptionPane.showOptionDialog(null,
             "You use the bandages. Your wounds already feel better...",
             "rot and deceit",

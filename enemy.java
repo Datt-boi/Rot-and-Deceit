@@ -15,7 +15,7 @@ public class enemy {
     public static String drops;
     public static int playerAcc = ThreadLocalRandom.current().nextInt(1, 6);
     public static int enemyAcc = ThreadLocalRandom.current().nextInt(1, 6);
-    public static Object[] options = { "attack", "guard" };
+    public static Object[] options = { "Attack", "Guard" };
     public static Object[] lose = {"GAME OVER",};
     public static int guardvalue = 0;
 
@@ -75,12 +75,12 @@ public class enemy {
                 if (enemyAcc > (3 + (Stats.armourCount))){
                     //subtracts an amount equal to the enemy's strength from the player's hitPoints, then storing the attack result in enemyAccMsg
                     Stats.playerHP = (Stats.playerHP - enemyStr);
-                    enemyAccMsg = "and hits you, dealing you " + enemyStr + " damage.";
+                    enemyAccMsg = " and hits you, dealing you " + enemyStr + " damage.";
                 }
                 //If the accuracy is not greater then 3, triggers this loop
                 else {
                     //Stores the attack result (no damage dealt) in playerAccMsg
-                    enemyAccMsg = ",but he misses, and deals no damage!";
+                    enemyAccMsg = ", but he misses, and deals no damage!";
                 }
                 //calculating the sucess of the player's guard
                 int playerAcc = ThreadLocalRandom.current().nextInt(1,7);
@@ -98,13 +98,17 @@ public class enemy {
                 else {
                     playerAccMsg = "You try to block the " + enemyType + "'s attack, but you are unsucessful.";
                 }
-                message = "You are on guard, preparing to block! \nThe " + enemyType + " attacks you " + enemyAccMsg + "\n" + playerAccMsg +
+                message = "You are on guard, preparing to block! \nThe " + enemyType + " attacks you" + enemyAccMsg + "\n" + playerAccMsg +
                 "\n" + enemyType + " strength: " + enemyStr + "\n" + enemyType + " HP: " + enemyHP
                 + "\n \n Your strength: " + Stats.playerStr + "\nYour HP: " + Stats.playerHP;
             }
         }
         if (Stats.playerHP > 0){
+<<<<<<< Updated upstream
             message = "You defeated the " + enemyType + "! \n It dropped " + drops + ".";
+=======
+            message = "You defeated the " + enemyType + "! \n \nAfter battle stats: \n HP = "+Stats.playerHP;
+>>>>>>> Stashed changes
             JOptionPane.showMessageDialog(null, message);
             return;
         }

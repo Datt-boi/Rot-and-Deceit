@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 public class broadSwrd {
     public static void tron() throws Exception {
 
-        Object[] cont = { "continue", "Back to inventory" };
+        Object[] cont = { "Continue", "Back to inventory" };
 
         int invreturn = JOptionPane.showOptionDialog(null,
             " You equip the Broadsword. Its weight feels good in your hands, and you feel like it is an extension of your arm.",

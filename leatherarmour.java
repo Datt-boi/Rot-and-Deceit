@@ -4,7 +4,7 @@ public class leatherarmour {
 
     public static void tron() throws Exception {
 
-        Object[] cont = { "continue", "Back to inventory" };
+        Object[] cont = { "Continue", "Back to inventory" };
         int invreturn = JOptionPane.showOptionDialog(null,
             "You equip the Leather armour.\n it fits snugly over your body, \n feeling almost like a second skin.",
             "rot and deceit",

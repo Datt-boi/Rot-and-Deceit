@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 public class invDontHave {
     public static void tron() throws Exception {
 
-        Object[] cont = { "continue", "Back to inventory" };
+        Object[] cont = { "Continue", "Back to inventory" };
 
         int invreturn = JOptionPane.showOptionDialog(null,
         "You don't have that item! Keep playing to get it",
